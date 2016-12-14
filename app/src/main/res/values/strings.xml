@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SimInfo</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="simSerialNumber">Sim serial number</string>
+    <string name="simCountryCode">Country Code</string>
+    <string name="simState">Sim State</string>
+    <string name="simOperatorCode">Operator Code</string>
+    <string name="simOperatorName">Operator Name</string>
+    <string name="simIMSI">Sim IMSI</string>
+    <string name="voiceMailTextID">Voice Mail Text ID</string>
+    <string name="voiceMailNumber">Voice Mail Number</string>
+    <string name="phoneType">Phone Type</string>
+    <string name="deviceIMEI">Device IMEI</string>
+
+</resources>
