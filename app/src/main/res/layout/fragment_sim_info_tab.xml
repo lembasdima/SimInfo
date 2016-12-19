@@ -10,20 +10,23 @@
         android:background="@color/backgroundColor"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:stretchColumns="0" >
+        android:stretchColumns="0"
+        android:padding="@dimen/content_padding">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
             <TextView
-                android:text="@string/phone_number"
+                android:textSize="@dimen/font_size_title"
+                android:text="@string/phoneNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/textTitleColor"
                 android:id="@+id/phone_number"/>
 
             <TextView
+                android:textSize="@dimen/font_size_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
@@ -38,6 +41,7 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:textSize="@dimen/font_size_title"
                 android:text="@string/simSerialNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -45,6 +49,7 @@
                 android:id="@+id/sim_Serial_Number" />
 
             <TextView
+                android:textSize="@dimen/font_size_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
@@ -59,6 +64,7 @@
             android:layout_height="match_parent" >
 
             <TextView
+                android:textSize="@dimen/font_size_title"
                 android:text="@string/simCountryCode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -66,6 +72,7 @@
                 android:id="@+id/sim_Country_Code" />
 
             <TextView
+                android:textSize="@dimen/font_size_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
@@ -80,6 +87,7 @@
             android:layout_height="match_parent" >
 
             <TextView
+                android:textSize="@dimen/font_size_title"
                 android:text="@string/simState"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -87,6 +95,7 @@
                 android:id="@+id/sim_State" />
 
             <TextView
+                android:textSize="@dimen/font_size_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
@@ -101,6 +110,7 @@
             android:layout_height="match_parent" >
 
             <TextView
+                android:textSize="@dimen/font_size_title"
                 android:text="@string/simOperatorCode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -108,6 +118,7 @@
                 android:id="@+id/sim_Operator_Code" />
 
             <TextView
+                android:textSize="@dimen/font_size_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
@@ -122,6 +133,7 @@
             android:layout_height="match_parent" >
 
             <TextView
+                android:textSize="@dimen/font_size_title"
                 android:text="@string/simOperatorName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -129,6 +141,7 @@
                 android:id="@+id/sim_Operator_Name" />
 
             <TextView
+                android:textSize="@dimen/font_size_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
@@ -143,6 +156,7 @@
             android:layout_height="match_parent" >
 
             <TextView
+                android:textSize="@dimen/font_size_title"
                 android:text="@string/simIMSI"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -150,6 +164,7 @@
                 android:id="@+id/sim_IMSI" />
 
             <TextView
+                android:textSize="@dimen/font_size_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
@@ -164,6 +179,7 @@
             android:layout_height="match_parent" >
 
             <TextView
+                android:textSize="@dimen/font_size_title"
                 android:text="@string/voiceMailTextID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -171,6 +187,7 @@
                 android:id="@+id/voice_Mail_Text_ID" />
 
             <TextView
+                android:textSize="@dimen/font_size_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
@@ -185,6 +202,7 @@
             android:layout_height="match_parent" >
 
             <TextView
+                android:textSize="@dimen/font_size_title"
                 android:text="@string/voiceMailNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -192,6 +210,7 @@
                 android:id="@+id/voice_Mail_Number" />
 
             <TextView
+                android:textSize="@dimen/font_size_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
@@ -206,6 +225,7 @@
             android:layout_height="match_parent" >
 
             <TextView
+                android:textSize="@dimen/font_size_title"
                 android:text="@string/phoneType"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -213,6 +233,7 @@
                 android:id="@+id/phone_Type" />
 
             <TextView
+                android:textSize="@dimen/font_size_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
@@ -227,6 +248,7 @@
             android:layout_height="match_parent" >
 
             <TextView
+                android:textSize="@dimen/font_size_title"
                 android:text="@string/deviceIMEI"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -234,6 +256,7 @@
                 android:id="@+id/device_IMEI" />
 
             <TextView
+                android:textSize="@dimen/font_size_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"

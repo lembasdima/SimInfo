@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">SimInfo</string>
-    <string name="phone_number">Phone Number</string>
+    <string name="phoneNumber">Phone Number</string>
     <string name="simSerialNumber">Sim serial number</string>
     <string name="simCountryCode">Country Code</string>
     <string name="simState">Sim State</string>
@@ -11,6 +11,20 @@
     <string name="voiceMailNumber">Voice Mail Number</string>
     <string name="phoneType">Phone Type</string>
     <string name="deviceIMEI">Device IMEI</string>
+
+
+    <!--Device info-->
+    <string name="phoneManufacture">Manufacture</string>
+    <string name="phoneBrand">Brand</string>
+    <string name="phoneModel">Model</string>
+    <string name="phoneProduct">Product</string>
+    <string name="phoneDisplay">Display</string>
+    <string name="phoneOSVersion">OS Version</string>
+    <string name="phoneHardware">Hardware</string>
+    <string name="phoneBoard">Board</string>
+    <string name="phoneCPUABI">CPU ABI</string>
+    <string name="phoneCPUABI2">CPU ABI2</string>
+    <string name="phoneDevice">Device</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

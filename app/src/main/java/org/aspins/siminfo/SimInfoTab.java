@@ -60,8 +60,8 @@ public class SimInfoTab extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_sim_info_tab, container, false);
 
-        simSeriaNumberTxtView  = (TextView)rootView.findViewById(R.id.phone_Number_Digital);
-        simSeriaNumberTxtView.setText(phoneNumber);
+        phoneNumberTxtView  = (TextView)rootView.findViewById(R.id.phone_Number_Digital);
+        phoneNumberTxtView.setText(phoneNumber);
 
         simSeriaNumberTxtView = (TextView)rootView.findViewById(R.id.sim_Serial_Number_Digital);
         simSeriaNumberTxtView.setText(simSerialNumber);

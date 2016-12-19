@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="backgroundColor">#000000</color>
-    <color name="textTitleColor">#FFFFFF</color>
-    <color name="textValueColor">#FFFFFF</color>
+    <color name="backgroundColor">#1F2427</color>
+    <color name="textTitleColor">#CBCED4</color>
+    <color name="textValueColor">#9BCC5C</color>
+
+
+    <color name="colorPrimary">#125688</color>
+    <color name="colorPrimaryDark">#125688</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#c8e8ff</color>
 </resources>
