@@ -1,27 +1,28 @@
 package org.aspins.siminfo;
 
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.telephony.TelephonyManager;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
-    private TextView phoneNumberTxtView;
-    private TextView countryCodeTxtView;
-    private TextView simStateTxtView;
-    private TextView simSeriaNumberTxtView;
-    private TextView simOperatorCodeTxtView;
-    private TextView simIMSI;
-    private TextView simOperatorNetworkTxtView;
-    private TextView voiceMailTextIDTxtView;
-    private TextView voiceMailNumberTxtView;
-    private TextView phoneTypeTxtView;
-    private TextView deviceIMEITxtView;
 
 
+    private Toolbar toolbar;
+    private android.support.design.widget.TabLayout tabLayout;
+    private ViewPager viewPager;
 
 
     @Override
@@ -29,71 +30,54 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TelephonyManager tm = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
-        String phoneNumber = tm.getLine1Number();
-        phoneNumberTxtView = (TextView)findViewById(R.id.phone_Number_Digital);
-        phoneNumberTxtView.setText(phoneNumber);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        String simSerialNumber = tm.getSimSerialNumber();
-        simSeriaNumberTxtView = (TextView)findViewById(R.id.sim_Serial_Number_Digital);
-        simSeriaNumberTxtView.setText(simSerialNumber);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        String countryCode = tm.getSimCountryIso();
-        countryCodeTxtView = (TextView)findViewById(R.id.sim_Country_Code_Text);
-        countryCodeTxtView.setText(countryCode);
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        setupViewPager(viewPager);
 
-        int simState = tm.getSimState();
+        tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(viewPager);
 
-        simStateTxtView = (TextView)findViewById(R.id.sim_State_Digital);
-        simStateTxtView.setText(String.valueOf(simState));
 
-        String simOperatorCode = tm.getSimOperator();
-        simOperatorCodeTxtView = (TextView)findViewById(R.id.sim_Operator_Code_Text);
-        simOperatorCodeTxtView.setText(simOperatorCode);
-
-        String simOperatorName = tm.getNetworkOperatorName();
-        simOperatorNetworkTxtView = (TextView)findViewById(R.id.sim_Operator_Name_Text);
-        simOperatorNetworkTxtView.setText(simOperatorName);
-
-        simIMSI = (TextView)findViewById(R.id.sim_IMSI_Digital);
-        simIMSI.setText(String.valueOf(tm.getSubscriberId()));
-
-        voiceMailTextIDTxtView = (TextView)findViewById(R.id.voice_Mail_Text_ID_Digital);
-        voiceMailTextIDTxtView.setText(tm.getVoiceMailAlphaTag());
-
-        voiceMailNumberTxtView = (TextView)findViewById(R.id.voice_Mail_Number_Digital);
-        voiceMailNumberTxtView.setText(tm.getVoiceMailNumber());
-
-        phoneTypeTxtView = (TextView)findViewById(R.id.phone_Type_Text);
-        setPhoneTypeName(tm.getPhoneType());
-        phoneTypeTxtView.setText(getPhoneTypeName());
-
-        deviceIMEITxtView = (TextView)findViewById(R.id.device_IMEI_Digital);
-        deviceIMEITxtView.setText(String.valueOf(tm.getDeviceId()));
     }
 
-    private int pID;
-    private String pPT;
-    public void setPhoneTypeName(int id){
-        this.pID = id;
+    private void setupViewPager(ViewPager viewPager) {
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new SimInfoTab(), "Sim Info");
+        adapter.addFragment(new DeviceInfotabs(), "Device Info");
+        adapter.addFragment(new SystemInfoTab(), "System Info");
+        viewPager.setAdapter(adapter);
+    }
 
-        switch (pID) {
-            case 0:
-                pPT = "UNKNOWN";
-                break;
-            case 1:
-                pPT = "GSM";
-                break;
-            case 2:
-                pPT = "CDMA";
-                break;
-            case 3:
-                pPT = "SIP";
-                break;
+    class ViewPagerAdapter extends FragmentPagerAdapter {
+        private final List<Fragment> mFragmentList = new ArrayList<>();
+        private final List<String> mFragmentTitleList = new ArrayList<>();
+
+        public ViewPagerAdapter(FragmentManager manager) {
+            super(manager);
         }
-    }
 
-    public String getPhoneTypeName(){
-        return pPT;
+        @Override
+        public Fragment getItem(int position) {
+            return mFragmentList.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return mFragmentList.size();
+        }
+
+        public void addFragment(Fragment fragment, String title) {
+            mFragmentList.add(fragment);
+            mFragmentTitleList.add(title);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return mFragmentTitleList.get(position);
+        }
     }
 }
