@@ -26,6 +26,19 @@
     <string name="phoneCPUABI2">CPU ABI2</string>
     <string name="phoneDevice">Device</string>
 
+
+    <!--System Info-->
+    <string name="androidOSName">Android OS Name</string>
+    <string name="androidVersion">Android Version</string>
+    <string name="apiLevel">API Level</string>
+    <string name="bootLoader">Boot Loader</string>
+    <string name="buildID">Build ID</string>
+    <string name="javaVM">Java VM</string>
+    <string name="openGLES">OpenGL ES</string>
+    <string name="kernelArchitecture">Kernel Architecture</string>
+    <string name="kernelVersion">Kernel Version</string>
+    <string name="rootAccess">Root Access</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

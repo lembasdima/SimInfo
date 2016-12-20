@@ -18,19 +18,44 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:text="@string/phoneNumber"
+                android:textSize="@dimen/font_size_title"
+                android:text="@string/androidOSName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/textTitleColor"
-                android:id="@+id/phone_number"/>
+                android:id="@+id/android_OS_Name"/>
 
             <TextView
+                android:textSize="@dimen/font_size_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
                 android:textColor="@color/textValueColor"
                 android:textIsSelectable="true"
-                android:id="@+id/os_version" />
+                android:id="@+id/android_OS_Name_Value" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:textSize="@dimen/font_size_title"
+                android:text="@string/androidVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textTitleColor"
+                android:id="@+id/android_Version"/>
+
+            <TextView
+                android:textSize="@dimen/font_size_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="@color/textValueColor"
+                android:textIsSelectable="true"
+                android:id="@+id/android_Version_Value" />
 
         </TableRow>
 
@@ -39,19 +64,21 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:text="@string/simSerialNumber"
+                android:textSize="@dimen/font_size_title"
+                android:text="@string/apiLevel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/textTitleColor"
-                android:id="@+id/sim_Serial_Number" />
+                android:id="@+id/api_Level" />
 
             <TextView
+                android:textSize="@dimen/font_size_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
                 android:textColor="@color/textValueColor"
                 android:textIsSelectable="true"
-                android:id="@+id/sim_Serial_Number_Digital"/>
+                android:id="@+id/api_Level_Value"/>
 
         </TableRow>
 
@@ -60,19 +87,21 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:text="@string/simCountryCode"
+                android:textSize="@dimen/font_size_title"
+                android:text="@string/bootLoader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/textTitleColor"
-                android:id="@+id/sim_Country_Code" />
+                android:id="@+id/boot_Loader" />
 
             <TextView
+                android:textSize="@dimen/font_size_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
                 android:textColor="@color/textValueColor"
                 android:textIsSelectable="true"
-                android:id="@+id/sim_Country_Code_Text"/>
+                android:id="@+id/boot_Loader_Value"/>
 
         </TableRow>
 
@@ -81,19 +110,21 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:text="@string/simState"
+                android:textSize="@dimen/font_size_title"
+                android:text="@string/buildID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/textTitleColor"
-                android:id="@+id/sim_State" />
+                android:id="@+id/build_ID" />
 
             <TextView
+                android:textSize="@dimen/font_size_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
                 android:textColor="@color/textValueColor"
                 android:textIsSelectable="true"
-                android:id="@+id/sim_State_Digital"/>
+                android:id="@+id/build_ID_Value"/>
 
         </TableRow>
 
@@ -102,19 +133,21 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:text="@string/simOperatorCode"
+                android:textSize="@dimen/font_size_title"
+                android:text="@string/javaVM"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/textTitleColor"
-                android:id="@+id/sim_Operator_Code" />
+                android:id="@+id/java_VM" />
 
             <TextView
+                android:textSize="@dimen/font_size_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
                 android:textColor="@color/textValueColor"
                 android:textIsSelectable="true"
-                android:id="@+id/sim_Operator_Code_Text"/>
+                android:id="@+id/java_VM_Value"/>
 
         </TableRow>
 
@@ -123,19 +156,21 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:text="@string/simOperatorName"
+                android:textSize="@dimen/font_size_title"
+                android:text="@string/openGLES"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/textTitleColor"
-                android:id="@+id/sim_Operator_Name" />
+                android:id="@+id/open_GL_ES" />
 
             <TextView
+                android:textSize="@dimen/font_size_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
                 android:textColor="@color/textValueColor"
                 android:textIsSelectable="true"
-                android:id="@+id/sim_Operator_Name_Text"/>
+                android:id="@+id/open_GL_ES_Value"/>
 
         </TableRow>
 
@@ -144,19 +179,21 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:text="@string/simIMSI"
+                android:textSize="@dimen/font_size_title"
+                android:text="@string/kernelArchitecture"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/textTitleColor"
-                android:id="@+id/sim_IMSI" />
+                android:id="@+id/kernel_Architecture" />
 
             <TextView
+                android:textSize="@dimen/font_size_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
                 android:textColor="@color/textValueColor"
                 android:textIsSelectable="true"
-                android:id="@+id/sim_IMSI_Digital"/>
+                android:id="@+id/kernel_Architecture_Value"/>
 
         </TableRow>
 
@@ -165,19 +202,21 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:text="@string/voiceMailTextID"
+                android:textSize="@dimen/font_size_title"
+                android:text="@string/kernelVersion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/textTitleColor"
-                android:id="@+id/voice_Mail_Text_ID" />
+                android:id="@+id/kernel_Version" />
 
             <TextView
+                android:textSize="@dimen/font_size_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
                 android:textColor="@color/textValueColor"
                 android:textIsSelectable="true"
-                android:id="@+id/voice_Mail_Text_ID_Digital"/>
+                android:id="@+id/kernel_Version_Value"/>
 
         </TableRow>
 
@@ -186,22 +225,24 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:text="@string/voiceMailNumber"
+                android:textSize="@dimen/font_size_title"
+                android:text="@string/rootAccess"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/textTitleColor"
-                android:id="@+id/voice_Mail_Number" />
+                android:id="@+id/root_Access" />
 
             <TextView
+                android:textSize="@dimen/font_size_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
                 android:textColor="@color/textValueColor"
                 android:textIsSelectable="true"
-                android:id="@+id/voice_Mail_Number_Digital"/>
+                android:id="@+id/root_Access_Value"/>
 
         </TableRow>
-
+<!--
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
@@ -243,6 +284,7 @@
                 android:id="@+id/device_IMEI_Digital"/>
 
         </TableRow>
+-->
     </TableLayout>
 
 </FrameLayout>

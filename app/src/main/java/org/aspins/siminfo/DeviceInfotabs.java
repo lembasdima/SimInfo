@@ -46,10 +46,10 @@ public class DeviceInfotabs extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_device_infotabs, container, false);
 
         phoneManufactureTxtView = (TextView)rootView.findViewById(R.id.phone_Manufacture_Name);
-        phoneManufactureTxtView.setText(Build.MANUFACTURER);
+        phoneManufactureTxtView.setText(Build.MANUFACTURER.toUpperCase());
 
         phoneBrandTxtView = (TextView)rootView.findViewById(R.id.phone_Brand_Name);
-        phoneBrandTxtView.setText(Build.BRAND);
+        phoneBrandTxtView.setText(Build.BRAND.toUpperCase());
 
         phoneModelTxtView = (TextView)rootView.findViewById(R.id.phone_Model_Name);
         phoneModelTxtView.setText(android.os.Build.MODEL);
