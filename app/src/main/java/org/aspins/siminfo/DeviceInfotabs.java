@@ -5,10 +5,16 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
 
 /**
@@ -76,10 +82,46 @@ public class DeviceInfotabs extends Fragment {
         phoneCPU_ABI2TxtView.setText(Build.CPU_ABI2);
 
         phoneDeviceTxtView = (TextView)rootView.findViewById(R.id.phone_Device_Name);
-        phoneDeviceTxtView.setText(Build.SERIAL);
+        phoneDeviceTxtView.setText(Build.DEVICE);
 
+        getCpuInfoMap();
+        Log.d("getCpuInfoMap test", getCpuInfoMap().toString());
+        long a = getUsedMemorySize();
+        String as = String.valueOf(a);
+
+        Log.d("getUserMemory test", as);
         //return inflater.inflate(R.layout.fragment_device_infotabs, container, false);
         return rootView;
+    }
+
+    public static Map<String, String> getCpuInfoMap() {
+        Map<String, String> map = new HashMap<>();
+        try {
+            Scanner s = new Scanner(new File("/proc/cpuinfo"));
+            while (s.hasNextLine()) {
+                String[] vals = s.nextLine().split(": ");
+                if (vals.length > 1) map.put(vals[0].trim(), vals[1].trim());
+            }
+        } catch (Exception e) {
+            Log.e("getCpuInfoMap",Log.getStackTraceString(e));}
+        return map;
+    }
+
+    public static long getUsedMemorySize() {
+
+        long freeSize = 0L;
+        long totalSize = 0L;
+        long usedSize = -1L;
+        try {
+            Runtime info = Runtime.getRuntime();
+            freeSize = info.freeMemory();
+            totalSize = info.totalMemory();
+            usedSize = totalSize - freeSize;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return usedSize;
+
     }
 
 }
