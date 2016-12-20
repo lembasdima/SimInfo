@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SimInfo</string>
+    <string name="app_name">Sim Info</string>
     <string name="phoneNumber">Phone Number</string>
     <string name="simSerialNumber">Sim serial number</string>
     <string name="simCountryCode">Country Code</string>

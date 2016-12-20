@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getDeviceSuperInfo();
+        //getDeviceSuperInfo();
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
+/*
     private static final String TAG = "MyActivity";
     private void getDeviceSuperInfo() {
         Log.i(TAG, "getDeviceSuperInfo");
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }//end getDeviceSuperInfo
-
+*/
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new SimInfoTab(), "Sim Info");
