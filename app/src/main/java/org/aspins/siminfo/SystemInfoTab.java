@@ -87,7 +87,7 @@ public class SystemInfoTab extends Fragment {
 
         return rootView;
     }
-
+/*Check if device is rooted*/
     private static boolean isRooted() {
         return findBinary("su");
     }
