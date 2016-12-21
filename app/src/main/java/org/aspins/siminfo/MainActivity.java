@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new SimInfoTab(), "Sim Info");
         adapter.addFragment(new DeviceInfotabs(), "Device Info");
         adapter.addFragment(new SystemInfoTab(), "System Info");
+        adapter.addFragment(new MemoryInfo(), "Memory Info");
         viewPager.setAdapter(adapter);
     }
 
