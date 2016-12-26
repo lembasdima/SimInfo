@@ -90,6 +90,8 @@ public class DeviceInfotabs extends Fragment {
         String as = String.valueOf(a);
 
         Log.d("getUserMemory test", as);
+
+
         //return inflater.inflate(R.layout.fragment_device_infotabs, container, false);
         return rootView;
     }

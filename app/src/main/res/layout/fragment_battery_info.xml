@@ -1,0 +1,179 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.aspins.siminfo.BatteryInfo">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/activity_main"
+        android:background="@color/backgroundColor"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:stretchColumns="0"
+        android:padding="@dimen/content_padding">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:textSize="@dimen/font_size_title"
+                android:text="@string/batteryLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textTitleColor"
+                android:id="@+id/battery_Level"/>
+
+            <TextView
+                android:textSize="@dimen/font_size_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="@color/textValueColor"
+                android:textIsSelectable="true"
+                android:id="@+id/battery_Level_Value" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textSize="@dimen/font_size_title"
+                android:text="@string/batteryTechnology"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textTitleColor"
+                android:id="@+id/battery_Technology" />
+
+            <TextView
+                android:textSize="@dimen/font_size_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="@color/textValueColor"
+                android:textIsSelectable="true"
+                android:id="@+id/battery_Technology_Value"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:textSize="@dimen/font_size_title"
+                android:text="@string/batteryPlugged"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textTitleColor"
+                android:id="@+id/battery_Plugged" />
+
+            <TextView
+                android:textSize="@dimen/font_size_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="@color/textValueColor"
+                android:textIsSelectable="true"
+                android:id="@+id/battery_Plugged_Value"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:textSize="@dimen/font_size_title"
+                android:text="@string/batteryHealth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textTitleColor"
+                android:id="@+id/battery_Health" />
+
+            <TextView
+                android:textSize="@dimen/font_size_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="@color/textValueColor"
+                android:textIsSelectable="true"
+                android:id="@+id/battery_Health_Value"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:textSize="@dimen/font_size_title"
+                android:text="@string/batteryStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textTitleColor"
+                android:id="@+id/battery_Status" />
+
+            <TextView
+                android:textSize="@dimen/font_size_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="@color/textValueColor"
+                android:textIsSelectable="true"
+                android:id="@+id/battery_Status_Value"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:textSize="@dimen/font_size_title"
+                android:text="@string/batteryVoltage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textTitleColor"
+                android:id="@+id/battery_Voltage" />
+
+            <TextView
+                android:textSize="@dimen/font_size_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="@color/textValueColor"
+                android:textIsSelectable="true"
+                android:id="@+id/battery_Voltage_Value"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:textSize="@dimen/font_size_title"
+                android:text="@string/batteryTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textTitleColor"
+                android:id="@+id/battery_Temperature" />
+
+            <TextView
+                android:textSize="@dimen/font_size_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="@color/textValueColor"
+                android:textIsSelectable="true"
+                android:id="@+id/battery_Temperature_Value"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+</FrameLayout>

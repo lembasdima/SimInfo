@@ -39,6 +39,15 @@
     <string name="kernelVersion">Kernel Version</string>
     <string name="rootAccess">Root Access</string>
 
+    <!--Battery info-->
+    <string name="batteryLevel">Battery Level</string>
+    <string name="batteryTechnology">Technology</string>
+    <string name="batteryPlugged">Plugged</string>
+    <string name="batteryHealth">Health</string>
+    <string name="batteryStatus">Status</string>
+    <string name="batteryVoltage">Voltage</string>
+    <string name="batteryTemperature">Temperature</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

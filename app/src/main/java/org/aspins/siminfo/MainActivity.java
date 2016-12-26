@@ -8,11 +8,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.telephony.TelephonyManager;
-import android.util.Log;
-import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -88,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new SimInfoTab(), "Sim Info");
         adapter.addFragment(new DeviceInfotabs(), "Device Info");
         adapter.addFragment(new SystemInfoTab(), "System Info");
-        adapter.addFragment(new MemoryInfo(), "Memory Info");
+        adapter.addFragment(new BatteryInfo(), "Battery Info");
         viewPager.setAdapter(adapter);
     }
 

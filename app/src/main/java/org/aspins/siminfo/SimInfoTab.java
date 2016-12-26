@@ -99,7 +99,6 @@ public class SimInfoTab extends Fragment {
         deviceIMEITxtView = (TextView)rootView.findViewById(R.id.device_IMEI_Digital);
         deviceIMEITxtView.setText(String.valueOf(tm.getDeviceId()));
 
-
         //return inflater.inflate(R.layout.fragment_sim_info_tab, container, false);
         return rootView;
     }
